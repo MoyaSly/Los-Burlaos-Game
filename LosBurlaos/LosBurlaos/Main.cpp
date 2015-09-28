@@ -2,12 +2,10 @@
 #include <stdlib.h>
 #include <iostream>
 #include <string>
+#define COLOR {system("color 0D"); system("color 0B"); system("color 0C"); system("color 0F"); system("color 0A");}
+
 using namespace std;
 
-int main()
-{
-	int x = 2;
-	int y = 2;
 	/*enum dir
 	{
 	NORTE,
@@ -18,6 +16,14 @@ int main()
 	BAJAR,
 	ADIOS
 	};*/
+
+
+int main()
+{
+	bool end = false;
+	int x = 2;
+	int y = 2;
+
 	char* map[5][5] =
 	{ "LA CALLE", "LA CALLE", "LA CALLE", "LA CALLE", "LA CALLE",
 	"LA CALLE", "LA CALLE", "LA CALLE", "LA CALLE", "LA CALLE",
@@ -26,12 +32,12 @@ int main()
 	"LA CALLE", "LA CALLE", "LA CALLE", "LA CALLE", "LA CALLE"
 	};
 
-	bool end = false;
 	cout << "TE RECIBIMOS CON UN PORRO DE PARTE DE LOS BURLAOS" << endl;
 	cout << "PARA SALIR DESPIDETE DILES ADIOS BURLAOS" << endl;
 
 	while (!end)
 	{
+		COLOR
 		string orden;
 		cout << "Estas en " << map[x][y] << endl;
 		cout << "¿En que direccion quieres ir?" << endl;
@@ -39,6 +45,7 @@ int main()
 
 		if (orden == "adios burlaos")
 		{
+			COLOR
 			cout << "Adios macho, nos pegaremos un bailesiko en tu honor por aver jugao a LOS BURLAOS" << endl;
 			end = true;
 		}
