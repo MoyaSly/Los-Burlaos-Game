@@ -69,6 +69,7 @@
   <ItemGroup>
     <ClInclude Include="Globals.h" />
     <ClInclude Include="Structs.h" />
+    <ClInclude Include="Voids.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
