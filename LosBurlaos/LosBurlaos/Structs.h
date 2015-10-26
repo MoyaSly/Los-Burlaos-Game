@@ -8,8 +8,8 @@
 
 struct Cosa
 {
-	char* nombre = NULL;
-	char* descripcion = NULL;
+	char* nombre = "\0";
+	char* descripcion = "\0";
 
 };
 struct Jugador

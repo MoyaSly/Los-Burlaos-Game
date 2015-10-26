@@ -13,44 +13,44 @@ void Cojer(string cojer)
 
 	if (cojer == mapa[x][y][z].obj1.nombre)
 	{
-		if (prota.obj1.nombre == NULL)
+		if (prota.obj1.nombre == "\0")
 		{
 			prota.obj1.nombre = mapa[x][y][z].obj1.nombre;
 			prota.obj1.descripcion = mapa[x][y][z].obj1.descripcion;
-			mapa[x][y][z].obj1.nombre = NULL;
-			mapa[x][y][z].obj1.descripcion = NULL;
+			mapa[x][y][z].obj1.nombre = "\0";
+			mapa[x][y][z].obj1.descripcion = "\0";
 			cout << endl << "has cogido " << prota.obj1.nombre << endl;
 		}
-		else if (prota.obj2.nombre == NULL)
+		else if (prota.obj2.nombre == "\0")
 		{
 			prota.obj2.nombre = mapa[x][y][z].obj1.nombre;
 			prota.obj2.descripcion = mapa[x][y][z].obj1.descripcion;
-			mapa[x][y][z].obj1.nombre = NULL;
-			mapa[x][y][z].obj1.descripcion = NULL;
+			mapa[x][y][z].obj1.nombre = "\0";
+			mapa[x][y][z].obj1.descripcion = "\0";
 			cout << endl << "has cogido " << prota.obj2.nombre << endl;
 		}
-		else if (prota.obj3.nombre == NULL)
+		else if (prota.obj3.nombre == "\0")
 		{
 			prota.obj3.nombre = mapa[x][y][z].obj1.nombre;
 			prota.obj3.descripcion = mapa[x][y][z].obj1.descripcion;
-			mapa[x][y][z].obj1.nombre = NULL;
-			mapa[x][y][z].obj1.descripcion = NULL;
+			mapa[x][y][z].obj1.nombre = "\0";
+			mapa[x][y][z].obj1.descripcion = "\0";
 			cout << endl << "has cogido " << prota.obj3.nombre << endl;
 		}
-		else if (prota.obj4.nombre == NULL)
+		else if (prota.obj4.nombre == "\0")
 		{
 			prota.obj4.nombre = mapa[x][y][z].obj1.nombre;
 			prota.obj4.descripcion = mapa[x][y][z].obj1.descripcion;
-			mapa[x][y][z].obj1.nombre = NULL;
-			mapa[x][y][z].obj1.descripcion = NULL;
+			mapa[x][y][z].obj1.nombre = "\0";
+			mapa[x][y][z].obj1.descripcion = "\0";
 			cout << endl << "has cogido " << prota.obj4.nombre << endl;
 		}
-		else if (prota.obj5.nombre == NULL)
+		else if (prota.obj5.nombre == "\0")
 		{
 			prota.obj5.nombre = mapa[x][y][z].obj1.nombre;
 			prota.obj5.descripcion = mapa[x][y][z].obj1.descripcion;
-			mapa[x][y][z].obj1.nombre = NULL;
-			mapa[x][y][z].obj1.descripcion = NULL;
+			mapa[x][y][z].obj1.nombre = "\0";
+			mapa[x][y][z].obj1.descripcion = "\0";
 			cout << endl << "has cogido " << prota.obj5.nombre << endl;
 		}
 
@@ -59,48 +59,55 @@ void Cojer(string cojer)
 			cout << endl << "llevas el bolsiko lleno BURLAO" << endl;
 		}
 
+		if (mapa[x][y][z].obj1.nombre == "\0" && mapa[x][y][z].obj2.nombre != "\0")
+		{
+			mapa[x][y][z].obj1 = mapa[x][y][z].obj2;
+			mapa[x][y][z].obj2.nombre = "\0";
+			mapa[x][y][z].obj2.descripcion = "\0";
+		}
+
 	}
 
 	else if (cojer == mapa[x][y][z].obj2.nombre)
 	{
-		if (prota.obj1.nombre == NULL)
+		if (prota.obj1.nombre == "\0")
 		{
 			prota.obj1.nombre = mapa[x][y][z].obj2.nombre;
 			prota.obj1.descripcion = mapa[x][y][z].obj2.descripcion;
-			mapa[x][y][z].obj2.nombre = NULL;
-			mapa[x][y][z].obj2.descripcion = NULL;
+			mapa[x][y][z].obj2.nombre = "\0";
+			mapa[x][y][z].obj2.descripcion = "\0";
 			cout << endl << "has cogido " << prota.obj1.nombre << endl;
 		}
-		else if (prota.obj2.nombre == NULL)
+		else if (prota.obj2.nombre == "\0")
 		{
 			prota.obj2.nombre = mapa[x][y][z].obj2.nombre;
 			prota.obj2.descripcion = mapa[x][y][z].obj2.descripcion;
-			mapa[x][y][z].obj2.nombre = NULL;
-			mapa[x][y][z].obj2.descripcion = NULL;
+			mapa[x][y][z].obj2.nombre = "\0";
+			mapa[x][y][z].obj2.descripcion = "\0";
 			cout << endl << "has cogido " << prota.obj2.nombre << endl;
 		}
-		else if (prota.obj3.nombre == NULL)
+		else if (prota.obj3.nombre == "\0")
 		{
 			prota.obj3.nombre = mapa[x][y][z].obj2.nombre;
 			prota.obj3.descripcion = mapa[x][y][z].obj2.descripcion;
-			mapa[x][y][z].obj2.nombre = NULL;
-			mapa[x][y][z].obj2.descripcion = NULL;
+			mapa[x][y][z].obj2.nombre = "\0";
+			mapa[x][y][z].obj2.descripcion = "\0";
 			cout << endl << "has cogido " << prota.obj3.nombre << endl;
 		}
-		else if (prota.obj4.nombre == NULL)
+		else if (prota.obj4.nombre == "\0")
 		{
 			prota.obj4.nombre = mapa[x][y][z].obj2.nombre;
 			prota.obj4.descripcion = mapa[x][y][z].obj2.descripcion;
-			mapa[x][y][z].obj2.nombre = NULL;
-			mapa[x][y][z].obj2.descripcion = NULL;
+			mapa[x][y][z].obj2.nombre = "\0";
+			mapa[x][y][z].obj2.descripcion = "\0";
 			cout << endl << "has cogido " << prota.obj4.nombre << endl;
 		}
-		else if (prota.obj5.nombre == NULL)
+		else if (prota.obj5.nombre == "\0")
 		{
 			prota.obj5.nombre = mapa[x][y][z].obj2.nombre;
 			prota.obj5.descripcion = mapa[x][y][z].obj2.descripcion;
-			mapa[x][y][z].obj2.nombre = NULL;
-			mapa[x][y][z].obj2.descripcion = NULL;
+			mapa[x][y][z].obj2.nombre = "\0";
+			mapa[x][y][z].obj2.descripcion = "\0";
 			cout << endl << "has cogido " << prota.obj5.nombre << endl;
 		}
 
@@ -117,21 +124,21 @@ void Dejar(string dejar)
 {
 	if (dejar == prota.obj1.nombre)
 	{
-		if (mapa[x][y][z].obj1.nombre == NULL)
+		if (mapa[x][y][z].obj1.nombre == "\0")
 		{
 			mapa[x][y][z].obj1.nombre = prota.obj1.nombre;
 			mapa[x][y][z].obj1.descripcion = prota.obj1.descripcion;
-			prota.obj1.nombre = NULL;
-			prota.obj1.descripcion = NULL;
+			prota.obj1.nombre = "\0";
+			prota.obj1.descripcion = "\0";
 			cout << endl << "has dejado " << mapa[x][y][z].obj1.nombre << endl;
 		}
 
-		else if (mapa[x][y][z].obj2.nombre == NULL)
+		else if (mapa[x][y][z].obj2.nombre == "\0")
 		{
 			mapa[x][y][z].obj2.nombre = prota.obj1.nombre;
 			mapa[x][y][z].obj2.descripcion = prota.obj1.descripcion;
-			prota.obj1.nombre = NULL;
-			prota.obj1.descripcion = NULL;
+			prota.obj1.nombre = "\0";
+			prota.obj1.descripcion = "\0";
 			cout << endl << "has dejado " << mapa[x][y][z].obj2.nombre << endl;
 		}
 
@@ -142,21 +149,21 @@ void Dejar(string dejar)
 	}
 	else if (dejar == prota.obj2.nombre)
 	{
-		if (mapa[x][y][z].obj1.nombre == NULL)
+		if (mapa[x][y][z].obj1.nombre == "\0")
 		{
 			mapa[x][y][z].obj1.nombre = prota.obj2.nombre;
 			mapa[x][y][z].obj1.descripcion = prota.obj2.descripcion;
-			prota.obj2.nombre = NULL;
-			prota.obj2.descripcion = NULL;
+			prota.obj2.nombre = "\0";
+			prota.obj2.descripcion = "\0";
 			cout << endl << "has dejado " << mapa[x][y][z].obj1.nombre << endl;
 		}
 
-		else if (mapa[x][y][z].obj2.nombre == NULL)
+		else if (mapa[x][y][z].obj2.nombre == "\0")
 		{
 			mapa[x][y][z].obj2.nombre = prota.obj2.nombre;
 			mapa[x][y][z].obj2.descripcion = prota.obj2.descripcion;
-			prota.obj2.nombre = NULL;
-			prota.obj2.descripcion = NULL;
+			prota.obj2.nombre = "\0";
+			prota.obj2.descripcion = "\0";
 			cout << endl << "has dejado " << mapa[x][y][z].obj2.nombre << endl;
 		}
 
@@ -167,21 +174,21 @@ void Dejar(string dejar)
 	}
 	else if (dejar == prota.obj3.nombre)
 	{
-		if (mapa[x][y][z].obj1.nombre == NULL)
+		if (mapa[x][y][z].obj1.nombre == "\0")
 		{
 			mapa[x][y][z].obj1.nombre = prota.obj3.nombre;
 			mapa[x][y][z].obj1.descripcion = prota.obj3.descripcion;
-			prota.obj3.nombre = NULL;
-			prota.obj3.descripcion = NULL;
+			prota.obj3.nombre = "\0";
+			prota.obj3.descripcion = "\0";
 			cout << endl << "has dejado " << mapa[x][y][z].obj1.nombre << endl;
 		}
 
-		else if (mapa[x][y][z].obj2.nombre == NULL)
+		else if (mapa[x][y][z].obj2.nombre == "\0")
 		{
 			mapa[x][y][z].obj2.nombre = prota.obj3.nombre;
 			mapa[x][y][z].obj2.descripcion = prota.obj3.descripcion;
-			prota.obj3.nombre = NULL;
-			prota.obj3.descripcion = NULL;
+			prota.obj3.nombre = "\0";
+			prota.obj3.descripcion = "\0";
 			cout << endl << "has dejado " << mapa[x][y][z].obj2.nombre << endl;
 		}
 
@@ -192,21 +199,21 @@ void Dejar(string dejar)
 	}
 	else if (dejar == prota.obj4.nombre)
 	{
-		if (mapa[x][y][z].obj1.nombre == NULL)
+		if (mapa[x][y][z].obj1.nombre == "\0")
 		{
 			mapa[x][y][z].obj1.nombre = prota.obj4.nombre;
 			mapa[x][y][z].obj1.descripcion = prota.obj4.descripcion;
-			prota.obj4.nombre = NULL;
-			prota.obj4.descripcion = NULL;
+			prota.obj4.nombre = "\0";
+			prota.obj4.descripcion = "\0";
 			cout << endl << "has dejado " << mapa[x][y][z].obj1.nombre << endl;
 		}
 
-		else if (mapa[x][y][z].obj2.nombre == NULL)
+		else if (mapa[x][y][z].obj2.nombre == "\0")
 		{
 			mapa[x][y][z].obj2.nombre = prota.obj4.nombre;
 			mapa[x][y][z].obj2.descripcion = prota.obj4.descripcion;
-			prota.obj4.nombre = NULL;
-			prota.obj4.descripcion = NULL;
+			prota.obj4.nombre = "\0";
+			prota.obj4.descripcion = "\0";
 			cout << endl << "has dejado " << mapa[x][y][z].obj2.nombre << endl;
 		}
 
@@ -217,21 +224,21 @@ void Dejar(string dejar)
 	}
 	else if (dejar == prota.obj5.nombre)
 	{
-		if (mapa[x][y][z].obj1.nombre == NULL)
+		if (mapa[x][y][z].obj1.nombre == "\0")
 		{
 			mapa[x][y][z].obj1.nombre = prota.obj5.nombre;
 			mapa[x][y][z].obj1.descripcion = prota.obj5.descripcion;
-			prota.obj5.nombre = NULL;
-			prota.obj5.descripcion = NULL;
+			prota.obj5.nombre = "\0";
+			prota.obj5.descripcion = "\0";
 			cout << endl << "has dejado " << mapa[x][y][z].obj1.nombre << endl;
 		}
 
-		else if (mapa[x][y][z].obj2.nombre == NULL)
+		else if (mapa[x][y][z].obj2.nombre == "\0")
 		{
 			mapa[x][y][z].obj2.nombre = prota.obj5.nombre;
 			mapa[x][y][z].obj2.descripcion = prota.obj5.descripcion;
-			prota.obj5.nombre = NULL;
-			prota.obj5.descripcion = NULL;
+			prota.obj5.nombre = "\0";
+			prota.obj5.descripcion = "\0";
 			cout << endl << "has dejado " << mapa[x][y][z].obj2.nombre << endl;
 		}
 
@@ -286,15 +293,15 @@ int main()
 
 		else if (orden == "inventario")														//LOOK INVENTARIO
 		{
-			if (prota.obj1.nombre)
+			if (prota.obj1.nombre != "\0")
 				cout << endl << "objeto 1: " << prota.obj1.nombre;	
-			if (prota.obj2.nombre)
+			if (prota.obj2.nombre != "\0")
 				cout << endl << "objeto 2: " << prota.obj2.nombre;
-			if (prota.obj3.nombre)
+			if (prota.obj3.nombre != "\0")
 				cout << endl << "objeto 3: " << prota.obj3.nombre;
-			if (prota.obj4.nombre)
+			if (prota.obj4.nombre != "\0")
 				cout << endl << "objeto 4: " << prota.obj4.nombre;
-			if (prota.obj5.nombre)
+			if (prota.obj5.nombre != "\0")
 				cout << endl << "objeto 5: " << prota.obj5.nombre;
 			if (!prota.obj1.nombre && !prota.obj2.nombre && !prota.obj3.nombre && !prota.obj4.nombre && !prota.obj5.nombre)
 				cout << endl << "no llevas nada en tu bolsiko";
