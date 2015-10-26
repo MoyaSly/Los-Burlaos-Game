@@ -58,7 +58,7 @@ void Cojer(string cojer)
 		{
 			cout << endl << "llevas el bolsiko lleno BURLAO" << endl;
 		}
-
+		// ORDENAR OBJETOS 
 		if (mapa[x][y][z].obj1.nombre == "\0" && mapa[x][y][z].obj2.nombre != "\0")
 		{
 			mapa[x][y][z].obj1 = mapa[x][y][z].obj2;
@@ -249,6 +249,32 @@ void Dejar(string dejar)
 	}
 	else
 		cout << endl << "no llevas nada de esto BURLAO" << endl;
+
+	// ORDENAR OBJETOS SALA
+	if (prota.obj4.nombre == "\0" && prota.obj5.nombre != "\0")
+	{
+		prota.obj4 = prota.obj5;
+		prota.obj5.nombre = "\0";
+		prota.obj5.descripcion = "\0";
+	}
+	if (prota.obj3.nombre == "\0" && prota.obj4.nombre != "\0")
+	{
+		prota.obj3 = prota.obj4;
+		prota.obj4.nombre = "\0";
+		prota.obj4.descripcion = "\0";
+	}
+	if (prota.obj2.nombre == "\0" && prota.obj3.nombre != "\0")
+	{
+		prota.obj2 = prota.obj3;
+		prota.obj3.nombre = "\0";
+		prota.obj3.descripcion = "\0";
+	}
+	if (prota.obj1.nombre == "\0" && prota.obj2.nombre != "\0")
+	{
+		prota.obj1 = prota.obj2;
+		prota.obj2.nombre = "\0";
+		prota.obj2.descripcion = "\0";
+	}
 }
 
 int main()

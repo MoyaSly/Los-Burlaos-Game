@@ -12,10 +12,8 @@ struct Cosa
 	char* descripcion = "\0";
 
 };
-struct Jugador
+struct Jugador : Cosa
 {
-	char* nombre;
-	char* descripcion;
 	Cosa obj1;
 	Cosa obj2;
 	Cosa obj3;
@@ -23,10 +21,8 @@ struct Jugador
 	Cosa obj5;
 };
 
-struct Zone
+struct Zone : Cosa
 {
-	char* nombre;
-	char* descripcion;
 	Cosa obj1;
 	Cosa obj2;
 };
