@@ -3,12 +3,16 @@
 #include <iostream>
 #include <string>
 #include "Structs.h"
+#include "String.h"
+#include "Defs.h"
 #include "Voids.h"
-#define COLOR {system("color 0D"); system("color 0B"); system("color 0C"); system("color 0F"); system("color 0A");}
+#include <windows.h>
+
+#define COLOR {system("color 4D"); system("color 2B"); system("color 3C"); system("color 6F"); system("color 1A");}
 
 using namespace std;
 
-void Cojer(string cojer)
+void Cojer(String cojer)
 {
 
 	if (cojer == mapa[x][y][z].obj1.nombre)
@@ -120,7 +124,7 @@ void Cojer(string cojer)
 	}
 }
 
-void Dejar(string dejar)
+void Dejar(String dejar)
 {
 	if (dejar == prota.obj1.nombre)
 	{
@@ -279,13 +283,15 @@ void Dejar(string dejar)
 
 int main()
 {
+	system("MODE 150,50");
+
 	bool end = false;
 	x = y = 5;
 	z = 1;
 	
 	Init();
+	cout << "                                                       -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-" << endl << "                                                       _-_-_-_-_-_-_LOS BURLAOS_-_-_-_-_-_-_" << endl << "                                                       -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-" << endl << endl << endl << endl;
 	cout << "TE RECIBIMOS CON UN PORRO DE PARTE DE LOS BURLAOS" << endl;
-	cout << "PARA SALIR DESPIDETE DILES ADIOS BURLAOS" << endl;
 
 	while (!end)
 	{
@@ -295,13 +301,15 @@ int main()
 		cout << "     - " << mapa[x][y][z].descripcion << endl;
 		cout << "     - Que quieres hacer?" << endl;
 		getline(cin, orden);
+		String ord = orden.c_str();
 
-		if (orden == "cojer")																//COJER
+		if (ord == "cojer")																//COJER
 		{
 			string cojer;
 			cout << "     - Que quieres cojer?" << endl;
 			getline(cin, cojer);
-			Cojer(cojer);
+			String coj = cojer.c_str();
+			Cojer(coj);
 		}
 
 		else if (orden == "dejar")																//DEJAR
@@ -309,7 +317,8 @@ int main()
 			string dejar;
 			cout << "     - Que quieres dejar?" << endl;
 			getline(cin, dejar);
-			Dejar(dejar);
+			String dej = dejar.c_str();
+			Dejar(dej);
 		}
 
 		else if (orden == "ver")
@@ -320,15 +329,15 @@ int main()
 		else if (orden == "inventario")														//LOOK INVENTARIO
 		{
 			if (prota.obj1.nombre != "\0")
-				cout << endl << "objeto 1: " << prota.obj1.nombre;	
+				cout << endl << "objeto 1: " << prota.obj1.nombre << ":" << prota.obj1.descripcion;	
 			if (prota.obj2.nombre != "\0")
-				cout << endl << "objeto 2: " << prota.obj2.nombre;
+				cout << endl << "objeto 2: " << prota.obj2.nombre << ":" << prota.obj2.descripcion;
 			if (prota.obj3.nombre != "\0")
-				cout << endl << "objeto 3: " << prota.obj3.nombre;
+				cout << endl << "objeto 3: " << prota.obj3.nombre << ":" << prota.obj3.descripcion;
 			if (prota.obj4.nombre != "\0")
-				cout << endl << "objeto 4: " << prota.obj4.nombre;
+				cout << endl << "objeto 4: " << prota.obj4.nombre << ":" << prota.obj4.descripcion;
 			if (prota.obj5.nombre != "\0")
-				cout << endl << "objeto 5: " << prota.obj5.nombre;
+				cout << endl << "objeto 5: " << prota.obj5.nombre << ":" << prota.obj5.descripcion;
 			if (!prota.obj1.nombre && !prota.obj2.nombre && !prota.obj3.nombre && !prota.obj4.nombre && !prota.obj5.nombre)
 				cout << endl << "no llevas nada en tu bolsiko";
 		}
@@ -353,7 +362,7 @@ int main()
 
 		else if (orden == "adios burlaos" || orden == "adios" || orden == "Adios")
 		{
-			cout << endl << endl << "     - Adios macho, nos pegaremos un bailesiko en tu honor por aver jugao a LOS BURLAOS" << endl;
+			cout << endl << endl << "     - Adios macho, nos pegaremos un bailesiko en tu honor por aver jugao a" << endl << endl << endl << "          -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-" << endl << "           _-_-_-_-_-_-_LOS BURLAOS_-_-_-_-_-_-_" << endl << "          -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-" << endl << endl << endl << endl;
 			COLOR
 			end = true;
 		}
