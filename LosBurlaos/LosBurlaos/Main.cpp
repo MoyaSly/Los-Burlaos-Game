@@ -370,5 +370,5 @@ int main()
 		else
 			cout << "     - Que hablas BURLAO?" << endl;
 	}
-	system("pause");
+	getchar();
 }
